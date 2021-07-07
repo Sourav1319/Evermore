@@ -78,7 +78,7 @@ router.put("/:id",middleware.isloggedin,middleware.checkcampgroundauth,function(
 			console.log(err)
 		}
 		else{
-			res.redirect("/campgrounds/"+req.params.id)
+			res.redirect("/books/"+req.params.id)
 		}
 	})
 })

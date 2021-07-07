@@ -5,7 +5,7 @@ var User=require("../models/user")
 
 
 router.get("/",function(req,res){
-	res.redirect('/campgrounds');
+	res.redirect('/books');
 })
 
 //register
@@ -23,7 +23,7 @@ router.post("/register",function(req,res)
 					else{
 						passport.authenticate("local")(req,res,function(){
 							req.flash("success","Welcome "+req.body.username+".")
-							res.redirect("/campgrounds")
+							res.redirect("/books")
 						})
 					}
 			})
@@ -36,7 +36,7 @@ router.get("/login",function(req,res){
 })
 
 router.post("/login",passport.authenticate("local",{
-	successRedirect:"/campgrounds",
+	successRedirect:"/books",
 	failureRedirect:"/login"
 }),function(req,res){
 
@@ -47,7 +47,7 @@ router.post("/login",passport.authenticate("local",{
 router.get("/logout",function(req,res){
 	req.logout(),
 	req.flash("success","you are logged out")
-	res.redirect("/campgrounds")
+	res.redirect("/books")
 })
 
 //adding the middleware

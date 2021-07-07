@@ -3,10 +3,10 @@
 <div class="container">
 	
 		<h2 style="margin-top:10px;"class="text-center">
-			Add your comment to <%=campground.name%>
+			Add your Name to <%=campground.name%>
 		</h2>
 		<div style="width:30%;margin:20px auto;">
-			<form class="" method="POST" action="/campgrounds/<%=campground._id%>/comments">
+			<form class="" method="POST" action="/books/<%=campground._id%>/comments">
 				<div class="form-group">
 					<input class="form-control" type="text" name="comment[text]" placeholder="Your comment">
 				</div>
@@ -17,7 +17,7 @@
 				
 				
 			</form>
-			<a href="/campgrounds">Go to Campgrounds page</a>
+			<a href="/books">Go to homepage</a>
 		</div>
 		
 	

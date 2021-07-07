@@ -4,7 +4,7 @@
 	
 		<h2 style="margin-top:10px;"class="text-center"><%=campground.name%></h2>
 		<div style="width:30%;margin:20px auto;">
-			<form class="" method="POST" action="/campgrounds/<%=campground._id%>?_method=PUT">
+			<form class="" method="POST" action="/books/<%=campground._id%>?_method=PUT">
 				<div class="form-group">
 					<input class="form-control" type="text" name="campground[name]" value="<%=campground.name%>">
 				</div>
@@ -20,7 +20,7 @@
 				
 				
 			</form>
-			<a href="/campgrounds">Go to Homepage page</a>
+			<a href="/books">Go to Homepage page</a>
 		</div>
 		
 	

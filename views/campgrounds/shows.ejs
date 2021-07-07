@@ -30,8 +30,8 @@
 					<p style="margin-top:12px"><%=campground.description%></p>
 					<p><em>Submitted by <%=campground.author.username%></em></p>
 					<%if(currentUser&&campground.author.id.equals(currentUser._id)){%>
-						<a href="/campgrounds/<%=campground._id%>/edit" type="button" class="btn btn-outline-secondary btn-sm ed">Edit</a>
-					<form id="form" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
+						<a href="/books/<%=campground._id%>/edit" type="button" class="btn btn-outline-secondary btn-sm ed">Edit</a>
+					<form id="form" action="/books/<%=campground._id%>?_method=DELETE" method="POST">
 						<button class="btn btn-outline-danger btn-sm del">Delete</button>
 					</form>
 					<%}%>
@@ -40,7 +40,7 @@
 			</div>
 			<div class="card bg-light">
 				<div class="card-body">
-					<a class="float-right btn btn-primary" href="/campgrounds/<%=campground._id%>/comments/new">Add to List</a>
+					<a class="float-right btn btn-primary" href="/books/<%=campground._id%>/comments/new">Add to List</a>
 					</div>
 					<hr>
 					<% campground.comments.forEach(function(comments){%>
@@ -49,8 +49,8 @@
 						<div class="col-md-12 op">
 							<strong><%=comments.author.username%></strong> : <%=comments.text%>
 							<%if(currentUser&&comments.author.id.equals(currentUser._id)){%>
-								<a href="/campgrounds/<%=campground._id%>/comments/<%=comments._id%>/edit" class="btn btn-outline-secondary btn-sm ed">Edit</a>
-								<form id="form" action="/campgrounds/<%=campground._id%>/comments/<%=comments._id%>?_method=DELETE" method="POST">
+								<a href="/books/<%=campground._id%>/comments/<%=comments._id%>/edit" class="btn btn-outline-secondary btn-sm ed">Edit</a>
+								<form id="form" action="/books/<%=campground._id%>/comments/<%=comments._id%>?_method=DELETE" method="POST">
 									<button class="btn btn-outline-danger btn-sm del">Delete</button>
 								</form>
 							<%}%>

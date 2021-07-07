@@ -50,8 +50,8 @@ app.use(function(req,res,next){
 
 //putting the declared routes in action
 app.use(auth_indexRoutes);
-app.use("/campgrounds/:id/comments",commentRoutes);
-app.use("/campgrounds",campgroundRoutes);
+app.use("/books/:id/comments",commentRoutes);
+app.use("/books",campgroundRoutes);
 
 
 const port = process.env.PORT || 3000;

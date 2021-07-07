@@ -25,7 +25,7 @@ router.post("/",middleware.isloggedin,function(req,res){
 		if(err){
 			console.log(err)
 			req.flash("error",err.message)
-			res.redirect("/campgrounds")
+			res.redirect("/books")
 		}
 		else{
 			comment.create(req.body.comment,function(err,newcomment){
@@ -41,7 +41,7 @@ router.post("/",middleware.isloggedin,function(req,res){
 						newcomment.save();
 						campground.comments.push(newcomment)
 						campground.save();
-						res.redirect("/campgrounds/"+req.params.id)
+						res.redirect("/books/"+req.params.id)
 				
 					
 						
@@ -71,7 +71,7 @@ router.put("/:comment_id",middleware.isloggedin,middleware.checkcommentauth,func
 				res.redirect("back")
 			}
 			else{
-				res.redirect("/campgrounds/"+req.params.id)
+				res.redirect("/books/"+req.params.id)
 			}
 	})
 })
@@ -84,7 +84,7 @@ router.delete("/:comment_id",function(req,res){
 		}
 		else{
 			req.flash("succcess","Comment successfully deleted")
-			res.redirect("/campgrounds/"+req.params.id)
+			res.redirect("/books/"+req.params.id)
 		}
 	})
 
