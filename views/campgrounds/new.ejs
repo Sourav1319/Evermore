@@ -1,0 +1,34 @@
+<%- include ('../partials/header')%>
+
+<div class="container">
+	
+		<h2 style="margin-top:10px;"class="text-center">YAYYY!!</h2>
+		<div style="width:30%;margin:20px auto;">
+			<form class="" method="POST" action="/campgrounds">
+				<div class="form-group">
+					<input class="form-control" type="text" name="name" placeholder="Book name">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="image" placeholder="image url">
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" type="text-area" name="description" placeholder="Add description"></textarea>
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary btn-block">Add</button>
+				</div>
+				
+				
+			</form>
+			<a href="/campgrounds">Go to Homepage</a>
+		</div>
+		
+	
+	
+</div>
+
+
+
+
+
+<%- include ('../partials/footer')%>
