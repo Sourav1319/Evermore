@@ -8,10 +8,10 @@ This site is protected using authentication(as it is only availble for college s
 
 Currently the site has these feature:
 
-1)Students can create add there things they want to sell/rent on the homepage and provide his information with it.
-2)If any student gets interested in buying or renting the products, he/she may directly ask the owner for further info in the comments.
-3)If the item is sold out or not availbale on current basis, the owener can remove them form the page.
-4)Students will also have the functionality to delete/edit their comments on the product page.
+1) Students can create add there things they want to sell/rent on the homepage and provide his information with it.
+2) If any student gets interested in buying or renting the products, he/she may directly ask the owner for further info in the comments.
+3) If the item is sold out or not availbale on current basis, the owener can remove them form the page.
+4) Students will also have the functionality to delete/edit their comments on the product page.
 
 Things that i am working on right on:
 
